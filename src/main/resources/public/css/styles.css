@@ -1,0 +1,167 @@
+/* Custom styles for TesseractDB Dashboard */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 1rem;
+}
+
+.table th {
+    font-weight: 600;
+    color: #495057;
+}
+
+.btn-icon {
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.25rem;
+}
+
+.section-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.segment-badge {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin: 0.25rem;
+    font-weight: 600;
+}
+
+.segment-high {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.segment-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.segment-low {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.cohort-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cohort-table th, .cohort-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.cohort-table th {
+    background-color: #e9ecef;
+}
+
+.cohort-cell-high {
+    background-color: #d4edda;
+}
+
+.cohort-cell-medium {
+    background-color: #fff3cd;
+}
+
+.cohort-cell-low {
+    background-color: #f8d7da;
+}
+
+.recommendation-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recommendation-score {
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    color: white;
+}
+
+.prediction-result {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.prediction-high {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.prediction-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.prediction-low {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.best-time-result {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* Properties table */
+.properties-table {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+.properties-table td {
+    padding: 0.25rem 0.5rem;
+    border: none;
+}
+
+.properties-table td:first-child {
+    font-weight: 600;
+    color: #495057;
+}

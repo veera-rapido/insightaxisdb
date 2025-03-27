@@ -1,0 +1,91 @@
+@startuml TesseractDB Architecture
+
+!define RECTANGLE class
+!define INTERFACE interface
+!define COMPONENT component
+!define DATABASE database
+!define CLOUD cloud
+!define ACTOR actor
+
+skinparam componentStyle uml2
+skinparam defaultTextAlignment center
+skinparam monochrome false
+skinparam shadowing false
+skinparam linetype ortho
+skinparam ArrowColor #666666
+skinparam BackgroundColor #FFFFFF
+skinparam ComponentBackgroundColor #FFFFFF
+skinparam DatabaseBackgroundColor #FFFFFF
+skinparam CloudBackgroundColor #FFFFFF
+skinparam ActorBackgroundColor #FFFFFF
+
+' External Systems
+ACTOR "Client Application" as Client
+ACTOR "Data Source" as DataSource
+
+' Main Components
+COMPONENT "REST API Layer" as APILayer {
+  RECTANGLE "TesseractDBServer" as Server
+  RECTANGLE "API Endpoints" as Endpoints
+  RECTANGLE "Request Handlers" as Handlers
+  RECTANGLE "Response Formatters" as Formatters
+}
+
+COMPONENT "Query Engine" as QueryEngine {
+  RECTANGLE "Query" as Query
+  RECTANGLE "QueryCondition" as QueryCondition
+  RECTANGLE "QueryResult" as QueryResult
+  RECTANGLE "QueryEngine" as QueryEngineImpl
+}
+
+COMPONENT "Storage Layer" as StorageLayer {
+  RECTANGLE "UserProfileStore" as UserProfileStore
+  RECTANGLE "EventStore" as EventStore
+  RECTANGLE "PersistenceManager" as PersistenceManager
+  DATABASE "NCF (Network Columnar Format)" as NCF
+}
+
+COMPONENT "Segmentation Engine" as SegmentationEngine {
+  RECTANGLE "RFMAnalysis" as RFMAnalysis
+  RECTANGLE "CohortAnalysis" as CohortAnalysis
+}
+
+COMPONENT "Machine Learning" as ML {
+  RECTANGLE "RecommendationEngine" as RecommendationEngine
+  RECTANGLE "PredictiveModel" as PredictiveModel
+}
+
+COMPONENT "Core" as Core {
+  RECTANGLE "Config" as Config
+}
+
+' Connections
+Client --> APILayer
+DataSource --> APILayer
+
+APILayer --> QueryEngine
+APILayer --> StorageLayer
+APILayer --> SegmentationEngine
+APILayer --> ML
+APILayer --> Core
+
+QueryEngine --> StorageLayer
+SegmentationEngine --> StorageLayer
+ML --> StorageLayer
+
+StorageLayer --> NCF
+
+' Detailed Connections
+Server --> Endpoints
+Endpoints --> Handlers
+Handlers --> Formatters
+
+QueryEngineImpl --> Query
+QueryEngineImpl --> QueryCondition
+QueryEngineImpl --> QueryResult
+
+UserProfileStore --> NCF
+EventStore --> NCF
+PersistenceManager --> NCF
+
+@enduml
