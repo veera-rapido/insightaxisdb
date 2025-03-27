@@ -68,7 +68,7 @@ for (Map<String, Object> row : result.getRows()) {
 
 ### NCF (Network Columnar Format)
 
-NCF is the storage format used by TesseractDB. It provides efficient columnar storage for user data.
+NCF is the storage format used by InsightAxisDB. It provides efficient columnar storage for user data.
 
 ```java
 // Create NCF writer

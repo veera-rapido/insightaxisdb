@@ -1,5 +1,5 @@
 /**
- * API client for TesseractDB
+ * API client for InsightAxisDB
  */
 class TesseractAPI {
     constructor(baseUrl = '') {

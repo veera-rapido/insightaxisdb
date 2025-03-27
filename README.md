@@ -67,7 +67,7 @@ Once the server is running, you can access the dashboard at http://localhost:808
 
 ### Quick Start
 
-Once the server is running, you can interact with TesseractDB via its REST API:
+Once the server is running, you can interact with InsightAxisDB via its REST API:
 
 1. Create a user:
 ```bash
@@ -108,9 +108,9 @@ The REST API server provides HTTP endpoints for:
 3. Generating segments, recommendations, and predictions
 4. Accessing the web dashboard
 
-### Using TesseractDB in Your Project
+### Using InsightAxisDB in Your Project
 
-To use TesseractDB in your own project, you can include the following components:
+To use InsightAxisDB in your own project, you can include the following components:
 
 #### Core Components
 - **NCF**: The Network Columnar Format storage engine
@@ -126,7 +126,7 @@ To use TesseractDB in your own project, you can include the following components
 - **PredictiveModel**: For predicting user behavior
 
 #### API
-- **TesseractDBServer**: REST API server for external access
+- **InsightAxisDBServer**: REST API server for external access
 
 ## API Documentation
 
@@ -134,7 +134,7 @@ For detailed API documentation, see the [API Documentation](docs/api_documentati
 
 ## Dashboard
 
-TesseractDB includes a web-based dashboard for visualizing data and insights. The dashboard is available at `http://localhost:8080` when the server is running.
+InsightAxisDB includes a web-based dashboard for visualizing data and insights. The dashboard is available at `http://localhost:8080` when the server is running.
 
 The dashboard provides the following features:
 

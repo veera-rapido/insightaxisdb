@@ -1,5 +1,5 @@
 /**
- * TesseractDB Dashboard Application
+ * InsightAxisDB Dashboard Application
  */
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize API client

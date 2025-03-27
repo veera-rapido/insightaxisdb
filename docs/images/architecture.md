@@ -9,7 +9,7 @@
 +---------------------------+
 |      REST API Layer       |
 |---------------------------|
-| - TesseractDBServer       |
+| - InsightAxisDBServer       |
 | - API Endpoints           |
 | - Request Handlers        |
 | - Response Formatters     |

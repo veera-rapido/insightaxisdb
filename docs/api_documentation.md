@@ -683,7 +683,7 @@ Triggers a manual load of all data from disk.
 
 ## Error Handling
 
-TesseractDB uses standard HTTP status codes to indicate the success or failure of an API request.
+InsightAxisDB uses standard HTTP status codes to indicate the success or failure of an API request.
 
 ### Common Status Codes
 
